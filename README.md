@@ -1,6 +1,6 @@
 # conferencesite
 
-> My splendid Nuxt.js project
+> My posh Nuxt.js project
 
 ## Build Setup
 

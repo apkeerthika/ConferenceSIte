@@ -6,7 +6,7 @@
         conferencesite
       </h1>
       <h2 class="subtitle">
-        My splendid Nuxt.js project
+        My posh Nuxt.js project
       </h2>
       <div class="links">
         <a
