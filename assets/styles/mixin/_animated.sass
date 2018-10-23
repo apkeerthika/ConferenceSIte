@@ -1,0 +1,63 @@
+@mixin animated
+  -webkit-animation-duration: 1s
+  animation-duration: 1s
+  -webkit-animation-fill-mode: both
+  animation-fill-mode: both
+
+@mixin animated-infinite
+  -webkit-animation-iteration-count: infinite
+  animation-iteration-count: infinite
+
+@mixin animated-delay-1s
+  -webkit-animation-delay: 1s
+  animation-delay: 1s
+
+@mixin animated-delay-2s
+  -webkit-animation-delay: 2s
+  animation-delay: 2s
+
+@mixin animated-delay-3s
+  -webkit-animation-delay: 3s
+  animation-delay: 3s
+
+@mixin animated-delay-4s
+  -webkit-animation-delay: 4s
+  animation-delay: 4s
+
+@mixin animated-delay-5s
+  -webkit-animation-delay: 5s
+  animation-delay: 5s
+
+@mixin animated-fast
+  -webkit-animation-duration: 800ms
+  animation-duration: 800ms
+
+@mixin animated-faster
+  -webkit-animation-duration: 500ms
+  animation-duration: 500ms
+
+@mixin animated-fastest
+  -webkit-animation-duration: 300ms
+  animation-duration: 300ms
+
+@mixin animated-slow
+  -webkit-animation-duration: 2s
+  animation-duration: 2s
+
+@mixin animated-slower
+  -webkit-animation-duration: 3s
+  animation-duration: 3s
+
+@mixin animated-slowest
+  -webkit-animation-duration: 5s
+  animation-duration: 5s
+
+@mixin slideInRight
+  @include animated
+  -webkit-animation-name: slideInRight
+  animation-name: slideInRight
+
+@mixin slideInUp
+  @include animated
+  -webkit-animation-name: slideInUp
+  animation-name: slideInUp
