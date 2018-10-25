@@ -5,8 +5,8 @@ section.hero
       h1 See You Next Year
       h6 SEPTEMBER 3-6, 2019 | BOSTON, MA
       .cta
-        a Watch 2017 RECAP
-        a Registerr for 2019
+        a.recap Watch 2017 RECAP
+        a.register Registerr for 2019
   AppHeader
 </template>
 
@@ -31,7 +31,6 @@ section.hero
   background-size: cover
   color: $white
   .container
-    z-index: 2
     text-transform: uppercase
     .banner-text
       max-width: 60rem
@@ -49,6 +48,31 @@ section.hero
         line-height: 2rem
         font-size: 1.5rem
       .cta
-        margin-bottom: $space*4
-
+        margin-top: $space*6
+        font-weight: bold
+        > a
+          border: 1px solid $white
+          padding: $space*2  $space*5
+          border-width: 0.2rem
+          display: inline-block
+          cursor: pointer
+          &:hover
+            background-color: rgba(255,255,255,0.2)
+            color: $white
+        .register
+          background: linear-gradient(to right, #ba2027, #a71072, #ea088b, #eb2155, #ba2027) 160% 0 repeat-x,linear-gradient(to top, #ba2027, #a71072, #ea088b, #eb2155, #ba2027) 100% 20% repeat-y,linear-gradient(to left, #ba2027, #a71072, #ea088b, #eb2155, #ba2027) 10% 100% repeat-x,linear-gradient(to bottom, #ba2027, #a71072, #ea088b, #eb2155, #ba2027) 0% 10% repeat-y
+          background-size: 300% .1875em,.1875em 300%
+          animation: rotateGradient 20s infinite linear
+          border: 0
+          padding: $space*2  $space*5
+          display: inline-block
+          margin-left: $space*5
+        .recap
+          &:after
+            content: '\25B6'
+            display: inline-block
+            position: relative
+            top: 0
+            left: 1.31em
+            width: 0.45em
 </style>

@@ -37,7 +37,6 @@ section.app-header
   margin-top: $space*1.5
   color: $white
   .container
-    
     @include spread
 
 section.app-header

@@ -1,5 +1,5 @@
 body
-  margin: 0
+  margin: 0 !important
   padding: 0
   @include theme($app-fg, $app-bg)
   overflow-x: hidden
@@ -15,9 +15,9 @@ body
 .page
   max-width: 100%
   overflow-x: hidden
-  margin-right: $header-height
-  @media (max-width: $breakpoint-appheader)
-    margin-right: 0
+  // margin-right: $header-height
+  // @media (max-width: $breakpoint-appheader)
+  //   margin-right: 0
   section
     > .container
       max-width: $page-width
