@@ -1,15 +1,16 @@
 <template lang="pug">
 .page
   h1 Conference
+  Speakers
 </template>
 
 
 <script>
 import Logo from '~/components/Logo.vue'
-
+import Speakers from '~/components/Speakers.vue'
 export default {
   components: {
-    Logo
+    Speakers
   }
 }
 </script>
