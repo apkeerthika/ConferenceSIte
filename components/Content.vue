@@ -1,14 +1,15 @@
 <template lang="pug">
 .pages
-  h1 BEST OF IMBOUND 2018
-    h5 SOME OF OUR FAVORITE MOMENTS
+  .heading
+    h1 BEST OF IMBOUND 2018
+      h3 SOME OF OUR FAVORITE MOMENTS
   .container
     ul(v-for="content in contents")
       li.list
-        a()
+        a
           img(:src="content.img")
         .content
-          h3 {{ content.name }}
+          a {{ content.name }}
           h6 {{ content.subname }}
           
       
@@ -37,22 +38,59 @@ export default {
 @import 'assets/styles/inbound.sass'
 
 .pages
+  width: 80%
+  margin-left: auto
+  margin-right: auto
+  padding: 2.87em 0
+  .heading
+    line-height: 1.1333
+    letter-spacing: 0
+    text-align: center
+    h1
+      color: black
+      font-size: 45px
+      h3
+        font-size: 1.5rem
+        margin-top: 0.55em
+
   .container
+    @include flex 
+    flex-wrap: wrap
+    padding: 2.87em 0
+    
     ul
       @include reset
-      @include flex
-
+      margin-bottom: 1rem
       li
-        background: $accent-color3
         color: $white
+        a 
+          img
+            width: 340px
+            height: 266px
+        ::after
+          content: ''
 
+          
+      &:nth-child(1)
         a
+          img
+            width: 710px
+            height: 266px
         .content
-          letter-spacing: 1px
-          line-height: 1.125
-          >h3
-            color: $white
-  
+          width: 710px
+          // height: 120px
+.container
+  li
+    .content
+      background: $accent-color3
+      letter-spacing: 1px
+      line-height: 1.125
+      color: $white
+      font-weight: 600
+      padding: 1.9em 3.18em 1.9em 1.9em
+      width: 340px
+      height: 120px
+
 
 
 </style>
