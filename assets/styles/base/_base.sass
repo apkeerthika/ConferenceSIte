@@ -2,9 +2,8 @@ body
   margin: 0 !important
   padding: 0
   @include theme($app-fg, $app-bg)
+  border: none
   overflow-x: hidden
-  &.freeze
-    overflow: hidden
 
 .page
   min-height: 100vh
@@ -23,7 +22,8 @@ body
       max-width: $page-width
       overflow: hidden
       margin: 0 auto
-      padding: $space/2 0
+      padding: 0 20px
+      // padding: $space/2 0
       @media (max-width: $page-width)
         padding: $space/2 $space*2
       @media (max-width: $breakpoint-tab-portrait)

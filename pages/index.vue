@@ -1,26 +1,29 @@
 <template lang="pug">
 .page
   hero
+  SignUp
   Content
   Speakers
-
 </template>
 
 
 <script>
-import Speakers from '~/components/Speakers.vue'
-import Hero from '~/components/Hero.vue'
-import Content from '~/components/Content.vue'
+import Hero from '~/components/Hero'
+import SignUp from '~/components/SignUp'
+import Content from '~/components/Content'
+import Speakers from '~/components/Speakers'
 export default {
   components: {
-    Speakers,
     Hero,
-    Content
+    SignUp,
+    Content,
+    Speakers,
   }
 }
 </script>
 
-<style lang="sass" scoped>
+<style lang="sass">
 @import 'assets/styles/inbound'
-
+body
+  margin: 0 !important
 </style>

@@ -1,5 +1,5 @@
 <template lang="pug">
-section.app-header
+section.app-header(:class="{dark: isScroll}")
   .container
     .logo
       nuxt-link(to="/")
@@ -17,28 +17,36 @@ section.app-header
 
 <script>
 export default {
-  
+  data () {
+    return {
+      isScroll: false
+    }
+  },
+  created () {
+    if (process.client)
+      window.addEventListener('scroll', this.handleScroll);
+  },
+  destroyed () {
+    window.removeEventListener('scroll', this.handleScroll);
+  },
+  methods: {
+    handleScroll () {
+      this.isScroll = window.scrollY >= 60
+    }
+  }
 }
 </script>
-
-// <style lang="sass">
-// @import 'assets/styles/inbound'
-
-// .app-header + section
-//   margin-top: $header-height
-// </style>
 
 <style lang="sass" scoped>
 @import 'assets/styles/inbound'
 
 section.app-header
   @include fixed-n
-  height: $header-height
-  margin-top: $space*1.5
+  height: $header-height - 1
   color: $white
   .container
     @include spread
-
+    padding-top: $space*1.3
 section.app-header
   .logo
     width: 15rem
@@ -51,9 +59,20 @@ section.app-header
       curosr: pointer
     .secondary a
       border: 2px solid $white
-      padding: $space*0.7 $space*2
+      padding: $space*0.5 $space*1.5
       text-decoration: none
+      display: inline-block
       &:hover
         background: rgba(255,255,255,0.2)
         color: $white
+
+
+.app-header.dark
+  background: $brand-color
+  transition: background-color 0.35s, border 0.35s
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  z-index: 20
 </style>
