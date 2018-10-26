@@ -6,25 +6,15 @@ section.best-of-2018
       h3 SOME OF OUR FAVORITE MOMENTS
     
     ul.moments
-      li
-        a
-          img(:src="featured.img")
-        .content
-          h4 
-            a {{ featured.name }}
-          h6 {{ featured.subname }}
-      li(v-for="content in contents")
-        a
-          img(:src="content.img")
-        .content
-          h4 
-            a {{ content.name }}
-          h6 {{ content.subname }}
+      moment-card(:content="featured", :isFeatured="true")
+      moment-card(v-for="c in contents", :content="c")
+
     .button
       a SEE MORE CONTENT
 
 </template>
 <script>
+import MomentCard from '@/components/MomentCard'
 export default {
   data() {
     return {
@@ -39,9 +29,10 @@ export default {
         
       ]
     }
+  },
+  components: {
+    MomentCard
   }
-
-  
 }
 </script>
 <style lang="sass" scoped>
@@ -62,39 +53,25 @@ export default {
       margin-top: 0.55em
 
 .best-of-2018
-
+  .container
+    padding: 0 !important
           
 .moments
-  @include flex 
-  flex-wrap: wrap
-  padding: 2.87em 0
+  border: none !important
   @include reset
-
-  li
-    // width: 340px
-    .content
-      background: $accent-color3
-      letter-spacing: 1px
-      line-height: 1.125
-      color: $white
-      font-weight: 600
-      padding: 1.9em 3.18em 1.9em 1.9em
-      height: 120px
-      h4
-        text-transform: uppercase
-        font-size: 1rem
-        font-weight: 700
-        line-height: 1.25rem
-      h6
-        font-weight: 300
+  @include spread
+  flex-wrap: wrap
 
 .best-of-2018
   .button
     border: 1px solid #190a35
     border-width: .1875em
     padding: 1.49em 5.1em
-    width: 31%
-    justify-content: center
+    width: 350px
+    margin: 2rem auto
+    color: black
+    text-align: center
+    box-sizing: border-box
     &:hover
       background-color: #190a35
       color: #fff
