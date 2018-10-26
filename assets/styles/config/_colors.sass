@@ -5,6 +5,14 @@ $accent-color3: #2b3990 !default
 $accent-color4: #501952 !default
 $accent-color5: #0d152b !default
 
+$inbound-violet: #190a35
+$inbound-blue: #2b3990
+$inbound-darkblue: #0d152b
+$inbound-pink: #ea088b
+$inbound-purple: #501a50
+$inbound-darkpurple: #431a4f
+$inbound-lightblue: #43c5e8
+$inbound-red: #eb2155
 
 // neutrals
 $white: #FFFFFF !default
@@ -18,11 +26,9 @@ $shadow-color: $neutral
 
 // app theme
 $app-bg: none !default
-$app-fg: $white !default
+$app-fg: $brand-color !default
 $content-bg: transparent !default
 $content-fg: $app-fg !default
-$content-alt-bg: $white !default
-$content-alt-fg: $black !default
 $header-bg: $white !default
 $header-fg: $app-fg !default
 $footer-bg: $white !default
@@ -44,18 +50,19 @@ $link-visited-fg: $brand-color !default
 $link-visited-bg: none !default
 
 // actions
-$action-bg: $neutral-light !default
-$action-fg: $neutral-dark !default
-$action-border: transparent !default
-$action-hover-bg: rgba($neutral-light, 0.8) !default
-$action-hover-fg: $action-fg !default
-$action-hover-border: transparent !default
-$primary-action-bg: $brand-color !default
+$action-bg: transparent !default
+$action-fg: $brand-color !default
+$action-border: $brand-color !default
+$action-hover-bg: $brand-color !default
+$action-hover-fg: $white !default
+$action-hover-border: $brand-color !default
+
+$primary-action-bg: $inbound-pink !default
 $primary-action-fg: $white !default
-$primary-action-border: transparent !default
-$primary-action-hover-bg: rgba($brand-color, 0.8) !default
+$primary-action-border: $inbound-pink !default
+$primary-action-hover-bg: $inbound-pink !default
 $primary-action-hover-fg: $white !default
-$primary-action-hover-border: transparent !default
+$primary-action-hover-border: $inbound-pink !default
 
 // navigation
 $nav-fg: $app-fg !default

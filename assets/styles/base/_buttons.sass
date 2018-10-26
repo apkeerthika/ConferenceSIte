@@ -1,15 +1,39 @@
-.btn
-  @include theme($content-fg, rgba($neutral-dark, 0.1))
-  font-weight: bold
+$action-alt-bg: transparent !default
+$action-alt-fg: $white !default
+$action-alt-border: $white !default
+$action-alt-hover-bg: rgba($white, 0.2) !default
+$action-alt-hover-fg: $white !default
+$action-alt-hover-border: $white !default
+
+@mixin btn($bg, $fg, $border)
+  background: $bg
+  color: $fg
+  border: 3px solid $fg
+  // font-weight: bold
   text-decoration: none
-  padding: $space*0.99 $space*2
+  padding: $space*0.5 $space*1.5
   text-transform: uppercase
   font-size: 1rem
   cursor: pointer
   line-height: 1rem
-  &.btn-primary
-    @include theme($primary-action-fg, $primary-action-bg)
   > *
     color: inherit !important
-  > *
-    color: inherit !important
+
+.btn
+  @include btn($action-bg, $action-fg, $action-border)
+  &:hover
+    @include btn($action-hover-bg, $action-hover-fg, $action-hover-border)
+
+
+.btn.btn-alt
+  @include btn($action-alt-bg, $action-alt-fg, $action-alt-border)
+  &:hover
+    @include btn($action-alt-hover-bg, $action-alt-hover-fg, $action-alt-hover-border)
+
+.btn.btn-primary
+  @include btn($primary-action-bg, $primary-action-fg, $primary-action-border)
+  &:hover
+    @include btn($primary-action-hover-bg, $primary-action-hover-fg, $primary-action-hover-border)
+
+.btn.btn-big
+  padding: 1.5rem 5rem
