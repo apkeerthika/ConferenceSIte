@@ -65,9 +65,10 @@ section.speakers-section
         .content
           background-color: $brand-color
           height: $space*10
-          padding: $space*2
+          
+          padding: 1rem 1rem
           color: $white
-          line-height: 2rem
+          line-height: 1rem
           > h3
             color: $white
     .sub-speakers
@@ -77,7 +78,6 @@ section.speakers-section
         display: flex
         flex-wrap: wrap
         justify-content: flex-start
-       
       .card
         display: flex  
         padding: .5rem
@@ -86,20 +86,21 @@ section.speakers-section
           height: 100%
           padding: $space
           display: block
-          
         .thumb
           img
             width: 100%
+            @media(max-width: $breakpoint-tab-1)
+              height: 100%
         .content
           background-color: $brand-color
           padding: $space*2
           color: $white
           line-height: 2rem
+          width: 100%
           @media(min-width: $breakpoint-tab-1)
             height: $space*10
           h3, p
             color: $white
-            // margin-left: 1rem      
           
          
       
