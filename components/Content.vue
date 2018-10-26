@@ -6,8 +6,7 @@ section.best-of-2018
       h3 SOME OF OUR FAVORITE MOMENTS
     
     ul.moments
-      moment-card(:content="featured", :isFeatured="true")
-      moment-card(v-for="c in contents", :content="c")
+      moment-card(v-for="(c, i) in contents", :content="c", :isFeatured="c.is_featured", :key="i")
 
     .button
       a SEE MORE CONTENT
@@ -18,10 +17,8 @@ import MomentCard from '@/components/MomentCard'
 export default {
   data() {
     return {
-      featured: {
-        img: 'https://www.inbound.com/hs-fs/hubfs/Metoo%20Wide.jpg' , name:' Tarana Burke & Emily Chang Keynote' , subname:'Tarana Burke & Emily Chang'
-      },
       contents:[
+        {img: 'https://www.inbound.com/hs-fs/hubfs/Metoo%20Wide.jpg', name:' Tarana Burke & Emily Chang Keynote' , subname:'Tarana Burke & Emily Chang', is_featured: true },
         {img: 'https://www.inbound.com/hs-fs/hubfs/ScottHarrison-2.jpg' , name:'Scott Harrison Keynote' , subname:'Scott Harrison'},
         {img: 'https://www.inbound.com/hs-fs/hubfs/Image%20from%20iOS%20(7).jpg' , name:'Chimamanda Ngozi Adichie Keynote' , subname:'Chimamanda Ngozi Adichie'},
         {img: 'https://www.inbound.com/hs-fs/hubfs/Image%20from%20iOS%20(6).jpg' , name:'Mo Gawdat Spotlight' , subname:'Mo Gawdat'},

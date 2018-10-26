@@ -20,8 +20,12 @@ export default {
 li.moment
   width: 350px
   margin-bottom: 15px
+  @media (max-width: 600px)
+    margin: 0 auto 15px
   &.featured
     width: 715px
+    @media (max-width: 600px)
+      width: 350px
   .thumb
     display: block
     height: 250px
