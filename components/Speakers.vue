@@ -4,13 +4,15 @@ section.speakers-section
     h1 FEATURED 2018 SPEAKERS
     .main-speakers
       .card(v-for="speaker in mainSpeakers ") 
-        img(:src="speaker.pic")
+        .thumb
+          img(:src="speaker.pic")
         .content
           h3 {{ speaker.name }}
           p {{ speaker.topic }}
     .sub-speakers
       .card(v-for="speaker in subSpeakers ") 
-        img(:src="speaker.pic")
+        .thumb
+          img(:src="speaker.pic")
         .content
           h3 {{ speaker.name }}
           p {{ speaker.topic }}      
@@ -50,18 +52,16 @@ section.speakers-section
     .main-speakers
       display: flex
       flex-wrap: wrap
-      justify-content: center
-      margin-left: auto
-      margin-right: auto
-      width: 100%
+      justify-content: flex-start
       .card
-        width: 33.33333333%
-        padding: 1rem
+        width: 31.33%
+        padding: .5rem
         @media(max-width: $breakpoint-tab-1)
           width: 50%
-        img
-          width: 100%
-          display: block
+        .thumb  
+          img
+            width: 100%
+            display: block
         .content
           background-color: $brand-color
           height: $space*10
@@ -71,25 +71,32 @@ section.speakers-section
           > h3
             color: $white
     .sub-speakers
-      display: flex
-      flex-wrap: wrap
-      justify-content: center
-      margin-left: auto
-      margin-right: auto
       width: 100%
-      margin-top: $space*2
+      margin-top: $space*10
+      @media(min-width: $breakpoint-tab-1)
+        display: flex
+        flex-wrap: wrap
+        justify-content: flex-start
+       
       .card
-        width: 24.9%
-        padding: $space
-        img
-          width: 100%
+        display: flex  
+        padding: .5rem
+        @media(min-width: $breakpoint-tab-1)
+          width: 24.9%
+          height: 100%
+          padding: $space
           display: block
+          
+        .thumb
+          img
+            width: 100%
         .content
           background-color: $brand-color
-          height: $space*10
           padding: $space*2
           color: $white
           line-height: 2rem
+          @media(min-width: $breakpoint-tab-1)
+            height: $space*10
           h3, p
             color: $white
             // margin-left: 1rem      
