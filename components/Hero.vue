@@ -25,7 +25,7 @@ export default {
 section.hero
   padding-top: $space*17
   height: auto
-  min-height: 110vh
+  min-height: 90vh
   background-image: url('https://www.inbound.com/hubfs/INBOUND_DAY2_117%20copy.jpg?t=1540347310091')
   background-repeat: no-repeat
   background-size: cover
@@ -39,11 +39,10 @@ section.hero
       h1
         color: $white
         font-size: 3.5rem
-        font-weight: 600
         letter-spacing: 1.5rem
         line-height: 5rem
       h6
-        font-weight: bold
+        font-weight: 600
         letter-spacing: 0.2rem
         line-height: 2rem
         font-size: 1.5rem
@@ -65,7 +64,6 @@ section.hero
           background-size: 300% .1875em,.1875em 300%
           animation: rotateGradient 20s infinite linear
           border: 0
-          // padding: $space*2  $space*5
           display: inline-block
           margin-left: $space*5
         .recap

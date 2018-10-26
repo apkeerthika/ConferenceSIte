@@ -13,7 +13,7 @@ section.sign-up
 
 <script>
 export default {
-  
+
 }
 </script>
 
@@ -22,7 +22,7 @@ export default {
 @import 'assets/styles/inbound'
 
 section.sign-up
-  min-height: 50vh
+  min-height: 40vh
   background-color: #501a50
   background-image: url('http://cdn2.hubspot.net/hubfs/146726/assets/images/backgrounds/bg-lens-flare.png')
   background-repeat: no-repeat
@@ -34,12 +34,10 @@ section.sign-up
       letter-spacing: 0.3rem
       font-size: $space*2
       text-align: center
-      margin-top: $space*2
+      margin-top: $space*4
     .updates
-      // max-width: 50rem
-      // margin: 0 auto
       text-align: center
-      margin-top: $space*2
+      margin-top: $space
       input
         width: 50% !important
         background-color: #ececf5
@@ -61,8 +59,7 @@ section.sign-up
       p
         line-height: 1.5 !important
         font-size: 0.7rem
-        font-weight: bold
         letter-spacing: 0.01rem
         text-transform: none !important
-        text-align: center !important
+        // text-align: center !important
 </style>
