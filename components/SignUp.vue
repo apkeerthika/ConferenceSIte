@@ -39,7 +39,7 @@ section.sign-up
       text-align: center
       margin-top: $space
       input
-        width: 50% !important
+        width: 40% !important
         background-color: #ececf5
         color: #190a35
         font-weight: 600
