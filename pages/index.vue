@@ -4,6 +4,7 @@
   SignUp
   Content
   Speakers
+  SpiltSection
 </template>
 
 
@@ -12,12 +13,14 @@ import Hero from '~/components/Hero'
 import SignUp from '~/components/SignUp'
 import Content from '~/components/Content'
 import Speakers from '~/components/Speakers'
+import SpiltSection from '~/components/SpiltSection'
 export default {
   components: {
     Hero,
     SignUp,
     Content,
     Speakers,
+    SpiltSection
   }
 }
 </script>
