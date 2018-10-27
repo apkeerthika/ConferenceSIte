@@ -15,7 +15,7 @@ body
 h1, h2, h3, h4, h5, h6, p, small
   font-family: $font
   // color: $inbound-violet
-  
+
 
 h1, h2, h3
   text-transform: $heading-text-transform
@@ -27,8 +27,6 @@ h4, h5, h6
   letter-spacing: $sub-heading-letter-spacing
   line-height: $sub-heading-line-height
 
-
-
 h1, .h1
   font-size: 3.75rem
   letter-spacing: 1.5rem
@@ -36,6 +34,8 @@ h1, .h1
 
 h2, .h2
   font-size: 2.5rem
+  @media (max-width: 480px)
+    font-size: 2rem
 
 h3, .h3
   font-size: 1.75rem
