@@ -1,77 +1,51 @@
 body
-  font-family: $font
+  font-family: "Proxima Nova", -apple-system, "Segoe UI", "Helvetica Neue", Arial, sans-serif
+  font-size: 16px
+  word-spacing: 1px
+  -ms-text-size-adjust: 100%
+  -webkit-text-size-adjust: 100%
+  -moz-osx-font-smoothing: grayscale
+  -webkit-font-smoothing: antialiased
+  box-sizing: border-box
+  letter-spacing: $letter-spacing
   line-height: $line-height
-  -webkit-font-smoothing: subpixel-antialiased
-          font-smoothing: subpixel-antialiased
+  // color: $inbound-violet
 
-h1, h2, h3, h4, h5, h6, p
-  margin: 0.5em 0
-  line-height: 1.5em
-  color: $white
+//Common
+h1, h2, h3, h4, h5, h6, p, small
+  font-family: $font
+  // color: $inbound-violet
+  
 
-// h1, h2, h3
-//   font-family: $heading-font
-//   font-weight: $heading-font-weight
+h1, h2, h3
+  text-transform: $heading-text-transform
+  letter-spacing: $heading-letter-spacing
+  line-height: $heading-line-height
 
 h4, h5, h6
-  font-family: $sub-heading-font
-  font-weight: $heading-font-weight
+  text-transform: $sub-heading-text-transform
+  letter-spacing: $sub-heading-letter-spacing
+  line-height: $sub-heading-line-height
 
-h1
-  &.h1
-    font-size: 3.75rem
-    font-weight: $heading-font-weight
-    font-family: $heading-font
-    letter-spacing: 1.5rem
-    line-height: 1.133
-    font-weight: 600
+
+
+h1, .h1
+  font-size: 3.75rem
+  letter-spacing: 1.5rem
+  line-height: 4.1rem
+
 h2, .h2
+  font-size: 2.5rem
 
-h3 
-  &.h3
-    font-size: 1.75rem
-    font-weight: $heading-font-weight
-    font-family: $heading-font
-    letter-spacing: 0.25rem
-    line-height: 1.2143
-    font-weight: 600
+h3, .h3
+  font-size: 1.75rem
 
 h4, .h4
-	font-size: 20px
-	line-height: 20px
+  font-size: 1.5rem
 
 h5, .h5
+  font-size: 1rem
 
-h6
-  &.h6
-    font-size: 1.25rem
-    font-weight: $heading-font-weight
-    font-family: $heading-font
-    letter-spacing: 0.125rem
-    line-height: 1.3
-    font-weight: 600
-    margin-bottom: 0.15rem
+h6, .h6
+  font-size: 1rem
 
-small
-  font-size: 0.75rem
-  font-weight: inherit
-
-strong
-  font-weight: 400
-
-a
-  color: inherit
-  text-decoration: none
-  &.app-nav:hover
-
-  &.app-nav.alt:hover
-    background: $white
-
-.navigation
-  a
-    color: $white
-    font-weight: 600
-    letter-spacing: 1px
-    cursor: pointer
-    padding: 1.5rem 0.86vw
-    // font-family: $
