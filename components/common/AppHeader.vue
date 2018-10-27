@@ -7,8 +7,8 @@ section.app-header(:class="{dark: isScroll}")
     nav.navigation
       .primary
         a About
-        a Agenda
         a Attend
+        a Agenda
         a Watch
         a Help
       .secondary
@@ -53,10 +53,8 @@ section.app-header
   .navigation
     @include flex
     .primary a, .secondary a
-      margin: 0 $space
-      font-weight: bold
+      // margin: 0 $space
       text-transform: uppercase
-      curosr: pointer
     .secondary a
       border: 2px solid $white
       padding: $space*0.5 $space*1.5
@@ -75,4 +73,8 @@ section.app-header
   left: 0
   width: 100%
   z-index: 20
+
+.navigation a
+  &:hover
+    border-bottom: 2px solid $white
 </style>

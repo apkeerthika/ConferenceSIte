@@ -1,7 +1,7 @@
 <template lang="pug">
 section.sign-up
   .container
-    h3 SignUp For Inbound Updates
+    h3.h3 SignUp For Inbound Updates
     .updates
       .input
         input(type="email", name="email" required, placeholder="you@yourDomain.com")
@@ -22,19 +22,16 @@ export default {
 @import 'assets/styles/inbound'
 
 section.sign-up
-  min-height: 40vh
+  // min-height: 45vh
   background-color: #501a50
   background-image: url('http://cdn2.hubspot.net/hubfs/146726/assets/images/backgrounds/bg-lens-flare.png')
   background-repeat: no-repeat
   background-size: cover
   background-position: bottom right
+  padding: 4.1em 0
   .container
     text-transform: uppercase
-    h3
-      letter-spacing: 0.3rem
-      font-size: $space*2
-      text-align: center
-      margin-top: $space*4
+    text-align: center
     .updates
       text-align: center
       margin-top: $space
@@ -53,7 +50,7 @@ section.sign-up
         border-radius: 0
       span
         button
-          background-color: #ea088b !important
+          height: 3rem
     .rich-text
       margin-top: $space*2
       p

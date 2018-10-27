@@ -2,8 +2,8 @@
 section.hero
   .container
     .banner-text
-      h1 See You Next Year
-      h6 SEPTEMBER 3-6, 2019 | BOSTON, MA
+      h1.h1 See You Next Year
+      h6.h6 SEPTEMBER 3-6, 2019 | BOSTON, MA
       .cta
         a.recap Watch 2017 RECAP
         a.register Registerr for 2019
@@ -23,9 +23,8 @@ export default {
 <style lang="sass" scoped>
 @import 'assets/styles/inbound'
 section.hero
-  padding-top: $space*17
   height: auto
-  min-height: 90vh
+  min-height: 100vh
   background-image: url('https://www.inbound.com/hubfs/INBOUND_DAY2_117%20copy.jpg?t=1540347310091')
   background-repeat: no-repeat
   background-size: cover
@@ -33,25 +32,14 @@ section.hero
   .container
     text-transform: uppercase
     .banner-text
-      max-width: 60rem
-      margin: 0 auto
       text-align: center
-      h1
-        color: $white
-        font-size: 3.5rem
-        letter-spacing: 1.5rem
-        line-height: 5rem
-      h6
-        font-weight: 600
-        letter-spacing: 0.2rem
-        line-height: 2rem
-        font-size: 1.5rem
+      padding: 17.05rem 0 9.45rem
       .cta
-        margin-top: $space*3
+        margin-top: 4.1rem
         font-weight: bold
         > a
           border: 1px solid $white
-          padding: $space*1.5  $space*5
+          padding: $space*1.49  $space*5.1
           border-width: 0.2rem
           display: inline-block
           cursor: pointer
