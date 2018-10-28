@@ -16,14 +16,19 @@ section.inbound-rocks
 section.inbound-rocks
   background-color: $inbound-darkblue
   color: $white
+  background-image: url('//cdn2.hubspot.net/hubfs/146726/assets/images/backgrounds/bg-spray-v3.svg')
+  background-repeat: no-repeat
+  background-position: 5% 100%
+  background-size: contain
   .container
-    // @include spread
-    padding-bottom: 0
+    @include spread
+    flex-direction: row-reverse
+    padding: 0 !important
     .rocks-image
-      background-image: url('//cdn2.hubspot.net/hubfs/146726/assets/images/backgrounds/bg-spray-v3.svg')
-      background-size: 100%
-      background-repeat: no-repeat
-      background-position: center center
+      flex: 1
+      img
+        width: 100%
+        margin: 0 auto
     .rocks-text
       .dope-queens, .artists
         margin: 0.5em 0
@@ -34,4 +39,8 @@ section.inbound-rocks
       .artists
         font-weight: 400
         font-size: 0.8rem
+      @media (min-width: 768px)
+        text-align: left
+        flex: 1
+        padding-left: $space*8
 </style>
