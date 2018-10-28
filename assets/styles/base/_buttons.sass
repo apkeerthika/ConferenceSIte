@@ -8,7 +8,7 @@ $action-alt-hover-border: $white !default
 @mixin btn($bg, $fg, $border)
   background: $bg
   color: $fg
-  border: 2px solid $border
+  border: 3px solid $border
   // font-weight: bold
   text-decoration: none
   padding: $space*0.5 $space*1.5
@@ -38,3 +38,28 @@ $action-alt-hover-border: $white !default
 
 .btn.btn-big
   padding: 1.5rem 5rem
+
+
+
+@mixin button($bg, $fg, $size, $border)
+  background: $bg
+  color: $fg
+  background-size: $size
+  border: 2px solid $border
+  // font-weight: bold
+  text-decoration: none
+  padding: $space*0.5 $space*1.5
+  text-transform: uppercase
+  font-size: 1rem
+  cursor: pointer
+  line-height: 1.625rem
+  letter-spacing: 1px
+  > *
+    color: inherit !important
+
+  
+.button.btn-inbound
+  @include button($inbound-action-bg, $inbound-action-fg, $inbound-action-size, $inbound-action-border)
+  padding: .55em 1.5em
+  padding-top: .7375em
+  padding-bottom: .7375em
