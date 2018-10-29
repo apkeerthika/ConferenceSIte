@@ -75,12 +75,13 @@ export default {
     width: 48%
 
 .profile-sub
-  &:nth-child(4n+2)
-    margin-left: 2.8%
-  &:nth-child(4n+4)
-    margin-left: 2.8%
-  &:nth-child(4n+5)
-    margin-left: 2.8%
+  @media(min-width: 768px)
+    &:nth-child(4n+2)
+      margin-left: 2.8%
+    &:nth-child(4n+4)
+      margin-left: 2.8%
+    &:nth-child(4n+5)
+      margin-left: 2.8%
 .profile-sub
   margin-top: $space*3
   width: 22.9%
