@@ -87,9 +87,13 @@ export default {
   display: flex
   flex-flow: column
   position: relative
+  @media(max-width: 768px)
+    width: 100%
   .image
     img
       width: 100%
+      @media(max-width: 768px)
+        height: 100%
   .caption
     background: $inbound-violet
     color: $white

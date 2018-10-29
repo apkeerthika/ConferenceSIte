@@ -7,14 +7,14 @@ section.speakers-section
         .thumb
           img(:src="speaker.pic")
         .content
-          h3 {{ speaker.name }}
+          p {{ speaker.name }}
           p {{ speaker.topic }}
     .sub-speakers
       .card(v-for="speaker in subSpeakers ") 
         .thumb
           img(:src="speaker.pic")
         .content
-          h3 {{ speaker.name }}
+          p {{ speaker.name }}
           p {{ speaker.topic }}      
 </template>
 <script>
@@ -69,7 +69,7 @@ section.speakers-section
           padding: 1rem 1rem
           color: $white
           line-height: 1rem
-          > h3
+          > p
             color: $white
     .sub-speakers
       width: 100%
@@ -99,7 +99,7 @@ section.speakers-section
           width: 100%
           @media(min-width: $breakpoint-tab-1)
             height: $space*10
-          h3, p
+          p, p
             color: $white
           
          
